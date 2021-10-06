@@ -1,0 +1,18 @@
+xxx-service:
+    scale: 1
+    startup: yes
+    always: yes
+    network: NodePort
+    ports:
+      - name: xxx-service
+        protocol: TCP
+        port: xxxx
+        nodePort: xxxxx
+    env:
+      MODE: rabbitmq
+      MONGO_CLIENT: mongodb://${MONGODB_SERVER_HOST}:xxxx/
+      DB_NAME: hogehoge
+      RABBITMQ_CLIENT: amqp://${name}:${name}@IP_ADDRESS:xxxxxx/
+      SERVICE_NAME: AION_SERVICE_NAME
+      RABBITMQ_QUEUE_NAME: xxxx
+      
