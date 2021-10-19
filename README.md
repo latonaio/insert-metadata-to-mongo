@@ -1,5 +1,5 @@
 ## 概要
-insert-metadata-to-mongoはkanban(RabbitMQ)から受け取ったデータをMongoDBに書き込みます。
+insert-metadata-to-mongo は、RabbitMQ、またはkanbanから受け取ったデータをmongoに書き込みます。
 
 ## 利用方法
 必要なパッケージのインストール
@@ -8,14 +8,14 @@ pip install -r requirements.txt
 ```
 
 ## 環境設定
-サービスを立ち上げるためにservices.ymlに環境変数を設定します。
+kubenetesやaionを立ち上げる際に必要なservices.ymlに環境変数を設定します。
 
 - MODE: rabbitmqとkanbanの二つのモードを指定することができます。データを受け取る際にどちらから受け取るかによって設定を変更してください。
 - MONGO_CLIENT: データ吐き出し先であるMongoDBのホストとポートを指定してください。
 - DB_NAME: データ吐き出し先のDBの名前を指定してください。
-- RABBITMQ_CLIENT: rabbitmqのホストとポートを指定してください。
+- RABBITMQ_CLIENT: rabbitMQのホストとポートを指定してください。
 - SERVICE_NAME: aionのkanbanから受け取るサービス名を指定してください。
-- RABBITMQ_QUEUE_NAME = rabbitmqから受け取るキューの名前を指定してください。 
+- RABBITMQ_QUEUE_NAME = rabbitMQから受け取るキューの名前を指定してください。 
 
 ```yml
 xxx-service:
