@@ -1,8 +1,8 @@
-## 概要
+# insert-metadata-to-mongo  
 insert-metadata-to-mongo は、RabbitMQ、またはkanbanから受け取ったデータをmongoに書き込みます。
 
 ## 利用方法
-必要なパッケージのインストール
+必要なパッケージのインストールを行います。
 ```
 pip install -r requirements.txt
 ```
